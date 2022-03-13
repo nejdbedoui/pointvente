@@ -1,11 +1,10 @@
-package controller;
-import entity.Commande;
-import entity.DetailsCommande;
+package com.example.demo.controller;
+import com.example.demo.entity.DetailsCommande;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import repository.RepDetails;
-import services.Serdetails;
+import com.example.demo.repository.RepDetails;
+import com.example.demo.services.Serdetails;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package repository;
+package com.example.demo.repository;
 
-import entity.Produit;
+import com.example.demo.entity.Produit;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface RepProduit extends MongoRepository<Produit,String> {

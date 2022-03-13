@@ -1,6 +1,6 @@
-package repository;
+package com.example.demo.repository;
 
-import entity.DetailsCommande;
+import com.example.demo.entity.DetailsCommande;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface RepDetails extends MongoRepository<DetailsCommande,String> {

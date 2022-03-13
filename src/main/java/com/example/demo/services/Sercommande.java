@@ -1,10 +1,9 @@
-package services;
+package com.example.demo.services;
 
-import entity.Commande;
-import entity.Produit;
+import com.example.demo.entity.Commande;
+import com.example.demo.repository.RepCommande;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import repository.RepCommande;
 
 import java.util.List;
 

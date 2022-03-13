@@ -1,11 +1,10 @@
-package controller;
-import entity.DetailsCommande;
-import entity.PointVente;
+package com.example.demo.controller;
+import com.example.demo.entity.PointVente;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import repository.RepPointVente;
-import services.Serpointvente;
+import com.example.demo.repository.RepPointVente;
+import com.example.demo.services.Serpointvente;
 
 import java.util.List;
 

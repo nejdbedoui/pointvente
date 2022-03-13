@@ -1,10 +1,8 @@
-package services;
-import entity.Commande;
-import entity.DetailsCommande;
+package com.example.demo.services;
+import com.example.demo.entity.DetailsCommande;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import repository.RepCommande;
-import repository.RepDetails;
+import com.example.demo.repository.RepDetails;
 
 import java.util.List;
 
@@ -22,8 +20,7 @@ public class Serdetails {
 
     public void Updatedetails(DetailsCommande d) {
         DetailsCommande d1=repDetails.findById(d.getId_details()).orElse(null);
-        d1.setId_commande(d.getId_commande());
-        d1.setId_produit(d.getId_produit());
+        d1.setProduit(d.getProduit());
         d1.setQuantite(d.getQuantite());
         repDetails.save(d1);
     }

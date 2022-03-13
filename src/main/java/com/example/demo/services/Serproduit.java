@@ -1,8 +1,8 @@
-package services;
-import entity.Produit;
+package com.example.demo.services;
+import com.example.demo.entity.Produit;
+import com.example.demo.repository.RepProduit;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import repository.RepProduit;
 
 import java.util.List;
 
