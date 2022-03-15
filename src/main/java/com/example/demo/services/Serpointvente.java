@@ -1,8 +1,8 @@
-package services;
-import entity.PointVente;
+package com.example.demo.services;
+import com.example.demo.entity.PointVente;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import repository.RepPointVente;
+import com.example.demo.repository.RepPointVente;
 
 import java.util.List;
 

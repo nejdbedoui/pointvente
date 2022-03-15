@@ -1,12 +1,10 @@
-package controller;
-import entity.PointVente;
-import entity.Produit;
+package com.example.demo.controller;
+import com.example.demo.entity.Produit;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import repository.RepCommande;
-import services.Sercommande;
-import services.Serproduit;
+import com.example.demo.repository.RepCommande;
+import com.example.demo.services.Serproduit;
 
 import java.util.List;
 
@@ -22,7 +20,6 @@ public class Contproduit {
     public Contproduit(Serproduit serproduit){
         this.serproduit=serproduit;
     }
-
     @GetMapping(value = "/GetProduit")
     @CrossOrigin(origins = "*")
     public List<Produit> GetProduit(){
@@ -31,8 +28,7 @@ public class Contproduit {
 
     @PostMapping(value = "/AddProduit")
     @CrossOrigin(origins = "*")
-    public void AddProduit(Produit p){
-        serproduit.AddProduit(p);
+    public void AddProduit(Produit p){serproduit.AddProduit(p);
     }
 
     @PutMapping(value = "/UpdateProduit")

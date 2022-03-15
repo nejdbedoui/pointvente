@@ -1,11 +1,11 @@
-package controller;
+package com.example.demo.controller;
 
-import entity.Commande;
+import com.example.demo.entity.Commande;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import repository.RepCommande;
-import services.Sercommande;
+import com.example.demo.repository.RepCommande;
+import com.example.demo.services.Sercommande;
 
 import java.util.List;
 
@@ -20,22 +20,24 @@ public class Contcommande {
     public Contcommande(Sercommande sercommande){
         this.sercommande=sercommande;
     }
-
     @GetMapping(value = "/GetCommande")
     @CrossOrigin(origins = "*")
     public List<Commande> GetCommande(){
+       // System.out.println(sercommande.GetCommande());
         return sercommande.GetCommande();
+
     }
 
     @PostMapping(value = "/AddCommande")
     @CrossOrigin(origins = "*")
-    public void AddCommande(Commande c){
-         sercommande.AddCommande(c);
+    public void AddCommande(@RequestBody Commande c){
+        sercommande.AddCommande(c);
+        System.out.println(c);
     }
 
     @PutMapping(value = "/UpdateCommande")
     @CrossOrigin(origins = "*")
-    public void UpdateCommande(Commande c){
+    public void UpdateCommande(@RequestBody Commande c){
         sercommande.UpdateCommande(c);
     }
 
